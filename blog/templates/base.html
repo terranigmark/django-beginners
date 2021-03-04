@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Dojo blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="nav-left">
+          <h1><a href="{% url 'home' %}">Python Dojo blog</a></h1>
+        </div>
+        <div class="nav-right">
+          <a href="{% url 'post_new' %}">Add NEW Blog Post</a>
+        </div>
+      </header>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
